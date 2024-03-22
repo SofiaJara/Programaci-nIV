@@ -1,12 +1,12 @@
 import java.util.ArrayList;
-//import java.util.Arrays;
+//import java.util.Arrays
 import java.util.List;
 import java.util.Scanner;
 
 
 public class ProyectoFinal {
 
-    //Objeto para leer datos por teclado
+//Objeto para leer datos por teclado
     public static Scanner leerDatoTeclado = new Scanner(System.in); 
 
 //Declaración de las constantes que representan la posición en el array de un usuario
@@ -62,6 +62,11 @@ public class ProyectoFinal {
                     }else{
                         System.out.println("Usuario incorrecto. Intente una vez más.");
                         Oportunidad++;
+                        if(Oportunidad == 3){
+                            Oportunidad = 0;
+                            System.out.println("No cuenta con más oportunidades");
+                            break;
+                        }
                     }
                 }
                 break;
@@ -182,9 +187,6 @@ public class ProyectoFinal {
         
         boolean bandera = false;
         //Recorrido de la lista de usuarios
-        for(int i = 0; i < registro_usuarios.size(); i++){
-
-        }
         for(int i = 0; i < registro_usuarios.size(); i++){{
             if(CorreoElectronico.equals(usuario[CORREO_ELECTRONICO_USUARIO]) && Contrasena.equals(usuario[CONTRASENA])){
                 bandera = true;
